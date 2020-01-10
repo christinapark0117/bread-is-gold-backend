@@ -20,7 +20,7 @@ class ChefsController < ApplicationController
         {
             :include=> {
                 :recipes=> {
-                    :only=>[:recipe_name, :ingredients, :directions]
+                    :only=>[:id, :recipe_name, :ingredients, :directions]
                 }
             },
             :except=>[:created_at, :updated_at]
